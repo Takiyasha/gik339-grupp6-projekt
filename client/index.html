@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmdatabas</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8">Filmsamling</h1>
+
+      <div class="flex flex-wrap -mx-2">
+        <!-- Formulär -->
+        <div class="w-full md:w-1/2 px-2 mb-4">
+          <form
+            id="movie-form"
+            class="bg-white shadow-lg rounded px-8 pt-6 pb-8"
+          >
+            <div class="mb-4">
+              <label
+                for="title"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Titel:</label
+              >
+              <input
+                type="text"
+                id="title"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="director"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Regissör:</label
+              >
+              <input
+                type="text"
+                id="director"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="releaseYear"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Utgivningsår:</label
+              >
+              <input
+                type="number"
+                id="releaseYear"
+                min="1800"
+                max="2024"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="genre"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Genre:</label
+              >
+              <input
+                type="text"
+                id="genre"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              <p>Lägg till / Uppdatera Film</p>
+            </button>
+          </form>
+        </div>
+
+        <!-- Filmlista -->
+        <div class="w-full md:w-1/2 px-2">
+          <div id="movies-list" class="space-y-4">
+            <!-- Filmkort kommer att skapas här -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
